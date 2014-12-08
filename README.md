@@ -4,21 +4,21 @@ This install Script goes through the proccess of installing Appium and the Andro
 
 Requirements:
 =============
-  For iOS Testing:
-    Xcode 5 or greater
-    Xcode command line utils
+  * For iOS Testing:
+    * Xcode 5 or greater
+    * Xcode command line utils
     
-  Android:
-    All requirements installed by script
-    You will need to go through the steps to add hardware acceleration for using emulator
-    You will also need to set up emulated devices
+  * Android:
+    * All requirements installed by script
+    * You will need to go through the steps to add hardware acceleration for using emulator
+    * You will also need to set up emulated devices
     
 Packages Installed:
 ===================
-  Homebrew
-  Appium
-  NVM - Node Version Manager
-  Android SDK
+  * Homebrew
+  * Appium
+  * NVM - Node Version Manager
+  * Android SDK
     
 Installation:
 =============

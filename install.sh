@@ -4,7 +4,8 @@ set -e
 
 check_homebrew()
 {
-
+  brew help
+  return $?
 }
 
 install_homebrew()
@@ -15,7 +16,8 @@ install_homebrew()
 
 check_node()
 {
-
+  node -v
+  return $?
 }
 
 install_nvm()
@@ -27,7 +29,8 @@ install_nvm()
 
 check_android()
 {
-
+  android -h
+  return $?
 }
 
 install_android()
@@ -42,10 +45,48 @@ setup_ios()
 
 check_appium()
 {
-  
+  appium --help
+  return $?
 }
 
 install_appium()
 {
   npm -g install appium
 }
+
+#Check for homebrew
+check_homebrew
+homebrew_installed=$?
+
+if [ $homebrew_installed -gt 0 ]
+then
+  install_homebrew
+fi
+
+#Check for node
+check_node
+node_installed=$?
+
+if [ $node_installed -gt 0 ]
+then
+  install_nvm
+fi
+
+#Check for Appium
+check_appium
+appium_installed=$?
+
+if [ $appium_installed -gt 0 ]
+then
+  install_appium
+  setup_ios
+fi
+
+#Check for android-sdk
+check_android
+android_installed=$?
+
+if [ $android_installed -gt 0 ]
+then
+  install_android
+fi

@@ -24,7 +24,7 @@ Installation:
 =============
 Run the following command in the Terminal and the script will handle all of the steps for the installation
 
-  curl https://raw.githubusercontent.com/NicCollins/AppiumInstaller/v0.1/install.sh | bash
+  `curl https://raw.githubusercontent.com/NicCollins/AppiumInstaller/v0.1/install.sh | bash`
   
 Post Installation:
 ==================

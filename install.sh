@@ -25,7 +25,7 @@ install_homebrew()
   brew update
   result=$?
   
-  if [ $reuslt -eq 0 ]
+  if [ $result -eq 0 ]
   then
     echo "Homebrew installed successfully"
     return 0

@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -e
-
 check_homebrew()
 {
   echo "Checking for installed Homebrew instance"

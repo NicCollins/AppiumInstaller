@@ -52,6 +52,29 @@ check_node()
   return $result
 }
 
+check_nvm()
+{
+  echo "Checking for existing nvm install"
+  
+  nvm
+  result=$?
+  
+  if [ $result -eq 0 ]
+  then
+    echo "NVM is already installed"
+  else
+    echo "NVM is not currently installed"
+  fi
+  
+  return $result
+}
+
+install_node()
+{
+  source ~/.nvm/nvm.sh
+  nvm install stable
+}
+
 install_nvm()
 {
   echo "Installing NVM"
@@ -62,8 +85,7 @@ install_nvm()
   if [ $result -eq 0 ]
   then
     echo "NVM installed successfully, installing Node"
-    source ~/.nvm/nvm.sh
-    nvm install stable
+    install_node
   else
     echo "Error installing NVM"
     exit 1
@@ -169,7 +191,15 @@ node_installed=$?
 
 if [ $node_installed -gt 0 ]
 then
-  install_nvm
+  check_nvm
+  nvm_installed=$?
+  
+  if [ $nvm_installed - gt 0 ]
+  then
+    install_nvm
+  else
+    install_node
+  fi
 fi
 
 echo ""

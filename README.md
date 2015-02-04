@@ -28,4 +28,4 @@ Run the following command in the Terminal and the script will handle all of the 
   
 Post Installation:
 ==================
-After installation you can run Appium by enterning 'Appium' into the terminal. Everything should be set up to allow use of the iOS simulator as well as both an actual Android device and the Android Emulator.
+After installation you can run Appium by entering 'Appium' into the terminal. Everything should be set up to allow use of the iOS simulator as well as both an actual Android device and the Android Emulator.

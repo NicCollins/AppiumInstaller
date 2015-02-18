@@ -194,7 +194,7 @@ then
   check_nvm
   nvm_installed=$?
   
-  if [ $nvm_installed - gt 0 ]
+  if [ $nvm_installed -gt 0 ]
   then
     install_nvm
   else

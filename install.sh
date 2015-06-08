@@ -179,7 +179,7 @@ install_appium()
 {
   echo "Installing Appium"
   
-  npm -g install appium
+  npm install appium@1.3.7
   result=$?
   
   if [ $result -eq 0 ]

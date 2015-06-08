@@ -91,7 +91,7 @@ check_nvm()
 install_node()
 {
   source ~/.nvm/nvm.sh
-  nvm install stable
+  nvm install v0.10.32
 }
 
 install_nvm()

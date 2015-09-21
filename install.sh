@@ -147,7 +147,7 @@ setup_ios()
 {
   echo "Authorizing Appium to use Xcode"
   
-  sudo authorize_ios
+  sudo authorize-ios
   result=$?
   
   if [ $result -eq 0 ]
@@ -189,6 +189,9 @@ install_appium()
     echo "Error installing Appium"
     exit 1
   fi
+  
+  sudo ln -s $HOME/node_modules/appium/bin/appium.js /usr/local/bin/appium
+  sudo ln -s $HOME/node_modules/appium/bin/authorize-ios.js /usr/local/bin/authorize-ios
 }
 
 echo "Starting install process"
